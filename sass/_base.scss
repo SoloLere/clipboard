@@ -1,0 +1,63 @@
+/*================================================
+    VARIABLES
+  ================================================
+*/
+
+$color-blue-light: hsl(233, 100%, 69%);
+$color-blue-gray: hsl(201, 11%, 66%);
+$color-blue-gray-dark: hsl(210, 10%, 33%);
+$color-cyan: hsl(171, 66%, 44%);
+
+// MEDIA QUERIES
+
+$bp-medium: 34.375em; // 550px
+$bp-large: 50em; // 800px
+
+/*================================================
+BASE STYLES
+================================================
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  color: $color-blue-gray-dark;
+}
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  color: $color-blue-gray;
+}

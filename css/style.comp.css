@@ -1,0 +1,287 @@
+/*================================================
+    VARIABLES
+  ================================================
+*/
+/*================================================
+BASE STYLES
+================================================
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.5; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+h1,
+h2 {
+  font-weight: 600;
+  color: #4c545d; }
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: -1px; }
+
+h2 {
+  font-size: 2.5rem; }
+
+p {
+  color: #9fabb2; }
+
+footer {
+  margin-top: 10rem;
+  padding-block: 5rem;
+  background-color: #e8e8e8;
+  text-align: center; }
+
+.footer__logo {
+  height: 4rem;
+  width: 4rem; }
+
+.footer__flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem; }
+
+.footer__nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 1rem; }
+  .footer__nav-container {
+    flex-basis: 30rem; }
+    @media screen and (min-width: 34.375em) {
+      .footer__nav-container {
+        flex-basis: 70%;
+        justify-self: flex-end; } }
+  @media screen and (min-width: 34.375em) {
+    .footer__nav {
+      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); } }
+  .footer__nav a {
+    color: #4c545d;
+    text-decoration: none;
+    font-weight: 500; }
+    .footer__nav a:hover {
+      color: #26baa4; }
+
+.icon {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer; }
+  .icon:hover {
+    background-color: #26baa4; }
+
+.socials .icon + .icon {
+  margin-left: 1rem; }
+
+/*================================================
+HEADER STYLES
+================================================
+*/
+.header {
+  padding-top: 10rem;
+  text-align: center;
+  background-image: url(../images/bg-header-mobile.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media screen and (min-width: 34.375em) {
+    .header {
+      background-image: url(../images/bg-header-desktop.png); } }
+  .header__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem; }
+  .header__logo {
+    margin-bottom: 3rem; }
+
+/*  UTILITY COMPONENTS
+================================================
+*/
+.container {
+  width: calc(min(110rem, 90vw));
+  margin-inline: auto; }
+
+.container__small {
+  width: calc(min(68rem, 90vw));
+  margin-inline: auto; }
+
+.header .btn__container {
+  align-self: stretch; }
+
+.btn {
+  cursor: pointer;
+  border: 0;
+  border-radius: 100px;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 1.25rem 3.25rem;
+  color: #fff;
+  box-shadow: 0 0.75rem 1rem rgba(76, 84, 93, 0.2);
+  transition: all 0.2s; }
+  .btn__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; }
+    @media screen and (min-width: 34.375em) {
+      .btn__container {
+        flex-direction: row;
+        justify-content: center; } }
+  .btn--ios {
+    background-color: #26baa4; }
+  .btn--mac {
+    background-color: #6173ff; }
+  .btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 0.7rem rgba(0, 0, 0, 0.4);
+    /* decrement blurry in the same proportion as Y to get the best effects*/ }
+
+.flex__stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem; }
+  .flex__stack > * {
+    flex-basis: 100%; }
+  .flex__stack--wrap {
+    max-width: 45rem;
+    flex-basis: calc( calc(80rem - 100%) * 999);
+    flex-grow: 1; }
+
+.margin-bottom__small {
+  margin-bottom: 1rem; }
+
+.margin-bottom__big {
+  margin-bottom: 4rem; }
+
+/*================================================
+MAIN & ARTICLE STYLES
+================================================
+*/
+/*  TRACK
+================================================
+*/
+.track {
+  margin-top: 10rem;
+  text-align: center; }
+  .track__heading {
+    margin-bottom: 8rem; }
+  .track.flex__stack {
+    gap: 5rem; }
+  .track > .flex__stack--wrap {
+    text-align: left; }
+  @media screen and (min-width: 50em) {
+    .track__feature {
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+      justify-content: flex-start; }
+      .track__feature > * {
+        flex-basis: 50%; } }
+  .track__desktop {
+    overflow: hidden; }
+    .track__desktop > img {
+      max-height: 40rem;
+      margin-inline: auto; }
+    @media screen and (min-width: 50em) {
+      .track__desktop > img {
+        width: 105%;
+        max-height: none;
+        transform: translateX(-5%); } }
+  .track__details {
+    margin-top: 5rem; }
+    @media screen and (min-width: 50em) {
+      .track__details {
+        margin-top: 0;
+        text-align: left;
+        min-width: 25rem;
+        max-width: 38rem; } }
+    .track__details > * + * {
+      margin-top: 3rem; }
+
+/*  ACCESS
+================================================
+*/
+.access {
+  margin-top: 10rem;
+  text-align: center; }
+  .access img {
+    margin-top: 8rem; }
+
+/*  SUPERCHARGE
+================================================
+*/
+.supercharge {
+  text-align: center; }
+  .supercharge__feature {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; }
+    .supercharge__feature > img {
+      height: 4rem; }
+
+/*  BRANDS
+================================================
+*/
+.brands {
+  margin-top: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem; }
+
+.brands > * {
+  height: 4rem;
+  flex-basis: 13rem;
+  max-width: 15rem;
+  flex-grow: 1; }
+
+/*
+// GRID
+.brands {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  grid-gap: 3rem;
+}
+*/
+.brands img {
+  margin-inline: auto; }
+
+/*  DOWNLOAD
+================================================
+*/
+.download {
+  margin-top: 10rem;
+  text-align: center; }
+  .download > * + * {
+    margin-top: 3rem; }
